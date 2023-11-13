@@ -10,9 +10,21 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="List" component={ListRecipe} />
-        <Stack.Screen name="Detail" component={DetailRecipe} />
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{title: 'All Category'}}
+        />
+        <Stack.Screen
+          name="List"
+          component={ListRecipe}
+          options={{title: 'Meals Overview'}}
+        />
+        <Stack.Screen
+          name="Detail"
+          component={DetailRecipe}
+          options={{title: 'About the Meal'}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
